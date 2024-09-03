@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Info Page</title>
+    <!-- Shoelace CDN -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.78/dist/shoelace.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.78/dist/shoelace.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            text-align: center;
+        }
+
+        .profile-info h1 {
+            margin: 10px 0;
+        }
+
+        .social-links sl-button {
+            margin: 5px;
+        }
+
+        .about-section {
+            margin-top: 40px;
+        }
+
+        .contact-section {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header Section -->
+    <header>
+        <img src="your-photo.jpg" alt="Profile Picture" class="profile-image">
+        <div class="profile-info">
+            <h1>John Doe</h1>
+            <p>Software Engineer | Web Developer</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <sl-card>
+            <strong slot="header">About Me</strong>
+            <p>Hello! I am John Doe, a passionate software engineer with a love for building modern web applications. I have 5 years of experience working with technologies like JavaScript, React, and Node.js.</p>
+        </sl-card>
+    </section>
+
+    <!-- Social Links Section -->
+    <section class="social-links">
+        <h2>Connect with Me</h2>
+        <sl-button variant="primary" href="https://github.com/yourprofile" target="_blank">GitHub</sl-button>
+        <sl-button variant="primary" href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</sl-button>
+        <sl-button variant="primary" href="https://twitter.com/yourprofile" target="_blank">Twitter</sl-button>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <sl-card>
+            <strong slot="header">Contact</strong>
+            <sl-input label="Your Name"></sl-input>
+            <sl-input label="Your Email" type="email"></sl-input>
+            <sl-textarea label="Message"></sl-textarea>
+            <sl-button variant="success" style="margin-top: 10px;">Send Message</sl-button>
+        </sl-card>
+    </section>
+</div>
+
+</body>
+</html>
